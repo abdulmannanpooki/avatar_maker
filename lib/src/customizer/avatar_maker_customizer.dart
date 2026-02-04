@@ -90,14 +90,9 @@ class AvatarMakerCustomizer extends StatefulWidget {
   _AvatarMakerCustomizerState createState() => _AvatarMakerCustomizerState();
 }
 
-class _AvatarMakerCustomizerState extends State<AvatarMakerCustomizer>
-    with SingleTickerProviderStateMixin {
+class _AvatarMakerCustomizerState extends State<AvatarMakerCustomizer> {
   late AvatarMakerController avatarMakerController;
   bool _controllerCreatedInternally = false;
-
-  /// Number of displayed categories in the customizer widget.
-  late int nbrDisplayedCategories;
-  late TabController tabController;
 
   @override
   void initState() {
@@ -112,18 +107,6 @@ class _AvatarMakerCustomizerState extends State<AvatarMakerCustomizer>
     if (tmpController == null) {
       _controllerCreatedInternally = true;
     }
-
-    nbrDisplayedCategories =
-        avatarMakerController.displayedPropertyCategories.length;
-
-    tabController = TabController(
-      length: nbrDisplayedCategories,
-      vsync: this,
-    );
-
-    tabController.addListener(() {
-      setState(() {});
-    });
 
     // Add listener to the controller
     avatarMakerController.addListener(() {
@@ -164,23 +147,6 @@ class _AvatarMakerCustomizerState extends State<AvatarMakerCustomizer>
     }
   }
 
-  /// Move to the previous or the next tab, depending the direction of the
-  /// array.
-  /// isLeft = true - Go to the previous tab
-  /// isLeft = false - Go to the next tab
-  void onArrowTap(bool isLeft) {
-    int _currentIndex = tabController.index;
-    if (isLeft)
-      tabController
-          .animateTo(_currentIndex > 0 ? _currentIndex - 1 : _currentIndex);
-    else
-      tabController.animateTo(_currentIndex < nbrDisplayedCategories - 1
-          ? _currentIndex + 1
-          : _currentIndex);
-
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -192,11 +158,8 @@ class _AvatarMakerCustomizerState extends State<AvatarMakerCustomizer>
         width: widget.scaffoldWidth ?? size.width,
         child: CustomizerBody(
           avatarMakerController: avatarMakerController,
-          tabController: tabController,
           theme: widget.theme,
-          scaffoldHeight: widget.scaffoldHeight,
           onTapOption: onTapOption,
-          onArrowTap: onArrowTap,
           isItemLocked: widget.isItemLocked,
           lockWidget: widget.lockWidget,
           onTapLockedItem: widget.onTapLockedItem,

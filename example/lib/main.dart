@@ -30,7 +30,34 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final AvatarMakerController _avatarMakerController =
-      NonPersistentAvatarMakerController(customizedPropertyCategories: []);
+      NonPersistentAvatarMakerController(customizedPropertyCategories: [
+    // Only show HairStyle, SkinColor, and HairColor
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.Accessory, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.Background, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.EyebrowType, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.EyeType, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.FacialHairColor, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.FacialHairType, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.HairColor, toDisplay: true),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.HairStyle, toDisplay: true),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.MouthType, toDisplay: false),
+    CustomizedPropertyCategory(id: PropertyCategoryIds.Nose, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.OutfitColor, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.OutfitType, toDisplay: false),
+    CustomizedPropertyCategory(
+        id: PropertyCategoryIds.SkinColor, toDisplay: true),
+  ]);
 
   @override
   Widget build(BuildContext context) {
@@ -185,6 +212,8 @@ class _NewPageState extends State<NewPage> {
                   autosave: false,
                   controller: widget.controller,
                   theme: AvatarMakerThemeData(
+                      secondaryBgColor: const Color.fromARGB(218, 238, 57, 57),
+                      selectedIconColor: const Color.fromARGB(255, 54, 244, 82),
                       boxDecoration: BoxDecoration(boxShadow: [BoxShadow()])),
                   isItemLocked: (category, item) {
                     // Example Logic: Lock "Glasses" if level < 5

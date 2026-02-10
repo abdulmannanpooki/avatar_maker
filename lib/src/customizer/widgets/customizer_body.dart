@@ -70,7 +70,7 @@ class CustomizerBody extends StatelessWidget {
         color: theme.primaryBgColor,
         borderRadius: BorderRadius.circular(40),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         physics: theme.scrollPhysics,
@@ -149,7 +149,9 @@ class CustomizerBody extends StatelessWidget {
         color: theme.primaryBgColor,
         borderRadius: BorderRadius.circular(28),
       ),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+      ),
       child: Row(
         children: [
           // Category icon
@@ -178,7 +180,8 @@ class CustomizerBody extends StatelessWidget {
                     _getColorFromItem(item, propertyCategory.id) ?? Colors.grey;
 
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
                   child: GestureDetector(
                     onTap: isLocked
                         ? () =>

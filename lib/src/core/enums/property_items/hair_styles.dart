@@ -3,7 +3,7 @@ import "package:avatar_maker/src/core/models/property_item.dart";
 
 /// List of all the hair styles displayed by default.
 enum HairStyles implements PropertyItem {
-  Bald(""),
+  // Bald(""),
   Eyepatch("""<g id="Top" strokeWidth="1" fill-rule="evenodd">
         <defs>
           <rect id="react-path-kvwd"  x="0" y="0" width="264" height="280" ></rect>

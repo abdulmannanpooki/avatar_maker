@@ -104,7 +104,8 @@ void main() {
             result[PropertyCategoryIds.EyebrowType], equals(Eyebrows.Default));
         expect(
             result[PropertyCategoryIds.Accessory], equals(Accessories.Nothing));
-        expect(result[PropertyCategoryIds.HairStyle], equals(HairStyles.Bald));
+        expect(result[PropertyCategoryIds.HairStyle],
+            equals(HairStyles.LongStraight));
         expect(result[PropertyCategoryIds.SkinColor], equals(SkinColors.Brown));
       });
 

@@ -84,7 +84,7 @@ final PropertyCategory HairStyle = PropertyCategory(
   iconFile: "assets/icons/hair.svg",
   properties: HairStyles.values,
   toDisplay: true,
-  defaultValue: HairStyles.Bald,
+  defaultValue: HairStyles.Long,
 );
 final PropertyCategory HairColor = PropertyCategory(
   id: PropertyCategoryIds.HairColor,
@@ -144,7 +144,7 @@ final PropertyCategory SkinColor = PropertyCategory(
   iconFile: "assets/icons/skin.svg",
   properties: SkinColors.values,
   toDisplay: true,
-  defaultValue: SkinColors.Brown,
+  defaultValue: SkinColors.White,
 );
 
 // List of all the default property categories. The order here represents the

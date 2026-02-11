@@ -154,15 +154,16 @@ class CustomizerBody extends StatelessWidget {
       ),
       child: Row(
         children: [
+          SizedBox(width: 12),
           // Category icon
           SvgPicture.asset(
             propertyCategory.iconFile!,
             package: 'avatar_maker',
             height: 28,
-            colorFilter: ColorFilter.mode(
-              theme.unselectedIconColor,
-              BlendMode.srcIn,
-            ),
+            // colorFilter: ColorFilter.mode(
+            //   theme.unselectedIconColor,
+            //   BlendMode.srcIn,
+            // ),
           ),
           const SizedBox(width: 12),
           // Color circles
@@ -206,7 +207,15 @@ class CustomizerBody extends StatelessWidget {
                                       spreadRadius: 2,
                                     )
                                   ]
-                                : null,
+                                : [
+                                    BoxShadow(
+                                      color:
+                                          Colors.black.withValues(alpha: 0.5),
+                                      blurRadius: 1,
+                                      spreadRadius: 0.5,
+                                      offset: Offset(2, 2),
+                                    )
+                                  ],
                           ),
                         ),
                         if (isLocked)
@@ -258,15 +267,9 @@ class CustomizerBody extends StatelessWidget {
     }
 
     return Container(
-      // decoration: theme.boxDecoration,
-      // clipBehavior: Clip.hardEdge,
-      child: Container(
-        // color: theme.secondaryBgColor,
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: rows,
-        ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: rows,
       ),
     );
   }

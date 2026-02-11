@@ -43,8 +43,50 @@ enum SkinColors implements PropertyItem {
     </g>
   </g> 
   """),
+  Porcelain("""
+  <g id="SkinColor/Porcelain" mask="url(#mask-6)" fill="#FFE8D0">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  """),
+  Honey("""
+  <g id="SkinColor/Honey" mask="url(#mask-6)" fill="#E0AC69">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  """),
+  Olive("""
+  <g id="SkinColor/Olive" mask="url(#mask-6)" fill="#C68642">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  """),
+  Espresso("""
+  <g id="SkinColor/Espresso" mask="url(#mask-6)" fill="#8D5524">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  """),
+  Almond("""
+  <g id="SkinColor/Almond" mask="url(#mask-6)" fill="#C4956A">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  """),
   Black("""
   <g id="SkinColor/Black" mask="url(#mask-6)" fill="#614335">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  """),
+  Ebony("""
+  <g id="SkinColor/Ebony" mask="url(#mask-6)" fill="#4A2912">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>

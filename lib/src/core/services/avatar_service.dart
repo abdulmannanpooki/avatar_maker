@@ -81,7 +81,7 @@ class AvatarService {
       PropertyCategoryIds.EyeType: Eyes.Default,
       PropertyCategoryIds.EyebrowType: Eyebrows.Default,
       PropertyCategoryIds.Accessory: Accessories.Nothing,
-      PropertyCategoryIds.HairStyle: HairStyles.Bald,
+      PropertyCategoryIds.HairStyle: HairStyles.LongStraight,
       PropertyCategoryIds.HairColor: HairColors.Black,
     };
 

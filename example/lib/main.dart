@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     label: Text("Customize"),
                     onPressed: () => Navigator.push(
                         context,
-                        new MaterialPageRoute(
+                        MaterialPageRoute(
                             builder: (context) => NewPage(
                                   controller: _avatarMakerController,
                                 ))),
